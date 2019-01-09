@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="iMessage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01d" translatesAutoresizingMaskIntoConstraints="NO" id="Q9p-h6-cB0">
+                                <rect key="frame" x="250" y="40" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BzV-RZ-Wgl"/>
+                                    <constraint firstAttribute="height" constant="50" id="lHI-cj-of0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhN-aL-7UL">
+                                <rect key="frame" x="20" y="45" width="210" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Lxo-1o-V2O"/>
+                                </constraints>
+                                <string key="text">Текущая температура:
+ + 25 С</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UW-VA-TA9">
+                                <rect key="frame" x="78.5" y="120" width="163" height="30"/>
+                                <state key="normal" title="Отправить сообщение"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="ObA-dk-sSI" eventType="touchUpInside" id="bfC-j7-1iW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2UW-VA-TA9" firstAttribute="top" secondItem="Q9p-h6-cB0" secondAttribute="bottom" constant="30" id="IbV-Me-22k"/>
+                            <constraint firstItem="ZhN-aL-7UL" firstAttribute="centerY" secondItem="Q9p-h6-cB0" secondAttribute="centerY" id="TsQ-gF-yyh"/>
+                            <constraint firstItem="ZhN-aL-7UL" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="20" id="VZG-2N-Lgj"/>
+                            <constraint firstItem="2UW-VA-TA9" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="WdF-cn-6QJ"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="Q9p-h6-cB0" secondAttribute="trailing" constant="20" id="gh1-4t-g2N"/>
+                            <constraint firstItem="Q9p-h6-cB0" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" constant="20" id="ipl-jl-Vxn"/>
+                            <constraint firstItem="Q9p-h6-cB0" firstAttribute="leading" secondItem="ZhN-aL-7UL" secondAttribute="trailing" constant="20" id="qkO-5x-Aue"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="imageView" destination="Q9p-h6-cB0" id="Js8-hm-FvJ"/>
+                        <outlet property="temperaturaLabel" destination="ZhN-aL-7UL" id="GqJ-oT-r8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="133.13343328335833"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="01d" width="50" height="50"/>
+    </resources>
+</document>
